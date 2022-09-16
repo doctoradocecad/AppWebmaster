@@ -1,0 +1,16 @@
+version: '3'
+
+services: 
+  db:
+    image: postgres
+
+    environment:
+      - POSTGRES_DB=jobtestdb
+      - POSTGRES_USER=django
+      - POSTGRES_PASSWORD=jobtest1234
+
+    volumes:
+      - .:/testjob
+    ports:
+      - "5432:5432"
+   
